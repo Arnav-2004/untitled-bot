@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 from discord import Intents
 from discord.ext import commands
@@ -17,6 +18,8 @@ class Bot(commands.Bot):
         super().__init__(command_prefix=constants.PREFIX, intents=intents)
 
         self.load_extensions()
+
+        self.launch_time = datetime.utcnow().timestamp()
 
     def load_extensions(self) -> None:
         """Something."""

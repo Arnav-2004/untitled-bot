@@ -252,6 +252,17 @@ python-versions = "*"
 pycodestyle = ">=2.0.0,<3.0.0"
 
 [[package]]
+name = "humanize"
+version = "3.11.0"
+description = "Python humanize utilities"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+tests = ["freezegun", "pytest", "pytest-cov"]
+
+[[package]]
 name = "identify"
 version = "2.2.15"
 description = "File identification library for Python"
@@ -514,7 +525,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.*"
-content-hash = "a437d8de09c49174b2f2f077db2595c45209d81343fe63c24f7a5e3907b2b22e"
+content-hash = "b58edb63b5b9b0fd4e77383b589af6ffa22c60d0445ae45ca83d1d2240ac6b49"
 
 [metadata.files]
 aiohttp = [
@@ -631,6 +642,10 @@ flake8-tidy-imports = [
 ]
 flake8-todo = [
     {file = "flake8-todo-0.7.tar.gz", hash = "sha256:6e4c5491ff838c06fe5a771b0e95ee15fc005ca57196011011280fc834a85915"},
+]
+humanize = [
+    {file = "humanize-3.11.0-py3-none-any.whl", hash = "sha256:06c79af7873473c47477840010ccb9b11b0d431f37f4a81b71edd653211936be"},
+    {file = "humanize-3.11.0.tar.gz", hash = "sha256:4160cdc63fcd0daac27d2e1e218a31bb396fc3fe5712d153675d89432a03778f"},
 ]
 identify = [
     {file = "identify-2.2.15-py2.py3-none-any.whl", hash = "sha256:de83a84d774921669774a2000bf87ebba46b4d1c04775f4a5d37deff0cf39f73"},
