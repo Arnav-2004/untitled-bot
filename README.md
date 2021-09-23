@@ -19,6 +19,8 @@ poetry run task bot
 Using Docker (Recommended):
 
 ```
+docker-compose up --build
+
 # use -d flag for detached mode
 docker-compose up
 
