@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  untitled:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: untitled
+    init: true
+
+    restart: on-failure
+
+    environment:
+      - ENVIRONMENT=DOCKER-DEVELOPMENT
+      - TOKEN
+      - PREFIX
+
+    volumes:
+      - .:/bot
