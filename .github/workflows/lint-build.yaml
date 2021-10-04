@@ -118,7 +118,7 @@ jobs:
           cache-from: type=registry,ref=ghcr.io/Arnav-2004/untitled-bot:latest
           cache-to: type=inline
           tags: |
-            ghcr.io/Arnav-2004/untitled-bot:latest
-            ghcr.io/Arnav-2004/untitled-bot:${{ steps.sha_tag.outputs.tag }}
+            ghcr.io/arnav-2004/untitled-bot:latest
+            ghcr.io/arnav-2004/untitled-bot:${{ steps.sha_tag.outputs.tag }}
           build-args: |
             git_sha=${{ github.sha }}
