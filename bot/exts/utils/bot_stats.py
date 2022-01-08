@@ -2,7 +2,7 @@ from datetime import datetime
 from platform import python_version
 
 import humanize
-from disnake import Embed, __version__, ApplicationCommandInteraction
+from disnake import Embed, __version__
 from disnake.ext import commands
 
 from bot.bot import Bot
