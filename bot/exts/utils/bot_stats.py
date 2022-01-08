@@ -2,8 +2,8 @@ from datetime import datetime
 from platform import python_version
 
 import humanize
-from discord import Embed, __version__
-from discord.ext import commands
+from disnake import Embed, __version__
+from disnake.ext import commands
 
 from bot.bot import Bot
 from bot.constants import Colors
@@ -23,7 +23,7 @@ class BotStats(commands.Cog):
             description=f"Gateway Latency: {round(self.bot.latency * 1000)}ms",
             color=Colors.green,
         )
-        await ctx.send(content=ctx.author.mention, embed=embed)
+        await ctx.reply(embed=embed)
 
     @commands.command()
     async def stats(self, ctx: commands.Context) -> None:
@@ -41,13 +41,13 @@ class BotStats(commands.Cog):
 
         fields = {
             "Python Version": python_version(),
-            "discord.py Version": __version__,
+            "Disnake Version": __version__,
             "Uptime": uptime,
         }
 
         for name, value in list(fields.items()):
             embed.add_field(name=name, value=value, inline=False)
-        await ctx.send(embed=embed)
+        await ctx.reply(embed=embed)
 
 
 def setup(bot: Bot) -> None:
