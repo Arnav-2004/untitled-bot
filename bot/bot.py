@@ -1,6 +1,7 @@
 import os
 from datetime import datetime
 
+import disnake
 from disnake import Intents
 from disnake.ext import commands
 
@@ -15,7 +16,11 @@ class Bot(commands.Bot):
         intents.members = True
         intents.presences = False
 
-        super().__init__(command_prefix=constants.PREFIX, intents=intents)
+        super().__init__(
+            command_prefix=constants.PREFIX,
+            activity=disnake.Game(f"{constants.PREFIX}help"),
+            intents=intents,
+        )
 
         self.load_extensions()
 
